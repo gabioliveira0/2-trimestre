@@ -96,5 +96,6 @@ function mostraPergunta(){
             })
             caixaAlternativas.appendChild(botaoAlternativas);
     }
+}
 
 mostraPergunta();
