@@ -4,7 +4,7 @@ const caixaAlternativas = document.querySelector(".caixa-alternativas");
 const caixaResultado = document.querySelector(".caixa-resultado");
 const textoResultado = document.querySelector(".texto-resultado");
 
-const perguntas = [
+const perguntas =
     {
         enunciado: "Assim que saiu da escola você se depara com uma nova tecnologia, um chat que consegue responder todas as dúvidas que uma pessoa pode ter, ele também gera imagens e áudios hiper-realistas. Qual o primeiro pensamento?",
         alternativas: [
@@ -90,14 +90,11 @@ function mostraPergunta() {
     caixaPerguntas.textContent = perguntaAtual.enunciado;
     mostraAlternativas();
 }
-function mostraAlternativas(){
+
+function mostraPergunta(){
     for(const alternativa of perguntaAtual.alternativas){
             const botaoAlternativas = document.createElement("button");
-            botaoAlternativas.textContent = alternativa.texto;
-            botaoAlternativas.addEventListener("click", function(){
-                atual++;
-                mostraPergunta();
-            })
+            botaoAlternativas.textContent = alternativa;
             caixaAlternativas.appendChild(botaoAlternativas);
     }
 
