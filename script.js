@@ -4,7 +4,7 @@ const caixaAlternativas = document.querySelector(".caixa-alternativas");
 const caixaResultado = document.querySelector(".caixa-resultado");
 const textoResultado = document.querySelector(".texto-resultado");
 
-const perguntas =
+const perguntas = [
     {
         enunciado: "Assim que saiu da escola você se depara com uma nova tecnologia, um chat que consegue responder todas as dúvidas que uma pessoa pode ter, ele também gera imagens e áudios hiper-realistas. Qual o primeiro pensamento?",
         alternativas: [
@@ -41,7 +41,7 @@ const perguntas =
                 afirmacao: "afirmacao"
             },
             {
-                texto: "Me preocupo com as pessoas que perderão seus empregos para máquinas e defendem a importância de proteger os trabalhadores."
+                texto: "Me preocupo com as pessoas que perderão seus empregos para máquinas e defendem a importância de proteger os trabalhadores.",
                 afirmacao: "afirmacao"
             }
 
@@ -55,7 +55,7 @@ const perguntas =
                 afirmacao: "afirmacao"
             },
             {
-                texto: "Criar uma imagem utilizando um gerador de imagem de IA."
+                texto: "Criar uma imagem utilizando um gerador de imagem de IA.",
                 afirmacao: "afirmacao"
             }
             
@@ -69,7 +69,7 @@ const perguntas =
                 afirmacao: "afirmacao"
             },
             {
-                texto: "O chat pode ser uma tecnologia muito avançada, mas é preciso manter a atenção pois toda máquina erra, por isso revisar o trabalho e contribuir com as perspectivas pessoais é essencial."
+                texto: "O chat pode ser uma tecnologia muito avançada, mas é preciso manter a atenção pois toda máquina erra, por isso revisar o trabalho e contribuir com as perspectivas pessoais é essencial.",
                 afirmacao: "afirmacao"
             }
             
@@ -90,10 +90,10 @@ function mostraPergunta(){
     for(const alternativa of perguntaAtual.alternativas){
             const botaoAlternativas = document.createElement("button");
             botaoAlternativas.textContent = alternativa.texto;
-            botaoAlternativas.addEventListener("click", () => respostaSelecionada()){
+            botaoAlternativas.addEventListener("click", () => respostaSelecionada(alternativa));{
                 atual++;
                 mostraPergunta();
-            })
+            }
             caixaAlternativas.appendChild(botaoAlternativas);
     }
 }
