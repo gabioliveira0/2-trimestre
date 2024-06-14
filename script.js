@@ -38,7 +38,7 @@ const perguntas = [
         alternativas: [
             {
                 texto: "Defende a ideia de que a IA pode criar novas oportunidades de emprego e melhorar habilidades humanas.",
-                afirmacao: "Vem impulsionando a inovação na área de IA e luta para abrie novos caminhos profissionais com IA."
+                afirmacao: "Vem impulsionando a inovação na área de IA e luta para abrir novos caminhos profissionais com IA."
             },
             {
                 texto: "Me preocupo com as pessoas que perderão seus empregos para máquinas e defendem a importância de proteger os trabalhadores.",
